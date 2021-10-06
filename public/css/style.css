@@ -1,0 +1,203 @@
+/* body {
+	background-color: greenyellow;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+.container {
+	margin: auto;
+	background-color: palevioletred;
+	width: 80%;
+	padding: 1em;
+}
+
+
+.counter {
+	background-color: lightgray;
+	font-size: 2em;
+	width: 3em;
+	text-align: center;
+	padding: 0.5em;
+	margin-bottom: 0.25em;
+}
+
+body {
+    background-color: #590D22;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align:center;
+    border-radius: 1em;
+}
+
+.pizza {
+    font-size: 13px;
+    border: 1px solid #800F2F;
+    font-style: oblique;
+    font-weight: inherit;
+    line-height: 1em;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: lightcoral;
+}
+
+.small_pizza {
+    background-color: #FFCCD5;
+    flex: 1;
+    
+}
+
+.medium_pizza {
+    background-color: #FFB3C1;
+    flex: 1;
+    
+}
+
+.large_pizza {
+    background-color: #FF8FA3;
+    flex: 1;
+   
+}
+
+.contact_us {
+    background-color: #FF4D6D;
+    flex: 1;
+    font-size: 13px;
+    border: 1px solid #800F2F;
+    font-style: oblique;
+    font-weight: inherit;
+    line-height: 1em;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: lightcoral;
+    text-align: center;
+}
+
+img {
+    max-width: 50%;
+    display: block;
+    border-radius: 2.5em;
+    border-style: groove;
+    animation-play-state: running;
+    align-items: center;
+    object-position: center;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .footer {
+   position: relative;
+   text-align: center;
+   margin-top: 1em;
+   bottom: 0;
+   font: italic;
+   font-size: 10px;
+   font-weight: unset;
+   font-style: italic;
+  }
+
+@media (min-width: 760px) {
+   body {
+    background-color: #FFF0F3;
+}
+}
+
+@media (min-width: 960px) {
+    body {
+        background-color: #FF758F;
+    }
+     
+    .pizzas {
+        display: flex;
+        }
+}
+
+h2 {
+    text-align: center;
+}
+.contain {
+    background-color:#fad2e1;
+    flex: 1;
+    padding: 3%;
+    font-size: 13px;
+    border: 1px solid #800F2F;
+    font-style: oblique;
+    font-weight: inherit;
+    line-height: 1em;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: lightcoral;
+    text-align: center;
+}
+.cart {
+    background-color:#FF5C8A;
+    flex: 1;
+    padding-top: 0.1em;
+}
+
+.cartTable {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.product {
+    text-align: center;
+}
+
+.checkOut, .payBtn {
+    display: box;
+    margin: auto;
+    border-radius: 1em;
+    border: 5%;
+    padding: 5px 5px;
+    background-color: #FF477E;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.addBtn, .minusBtn {
+    display: box;
+    margin: auto;
+    border-radius: 2em;
+    border: 5%; 
+    padding: 5px 5px;
+    background-color: #FF477E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pAmt {
+    font-weight: bold;
+    border: 10em;
+    border-radius: 10%;
+}
+
+.payAmt {
+    border: 2%;
+    margin-left: 3px;
+    padding: 3px;
+    background-color: #FF477E;
+    font-size: 12px;
+    box-shadow: none;
+    display: ruby;
+}
+.hidden {
+    display: none;
+}
+.addBtn:active, .minusBtn:active, .checkOut:active, .payBtn:active {
+    box-shadow: #FF477E;
+}
+
