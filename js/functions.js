@@ -1,5 +1,5 @@
 module.exports = function PizzaCart() {
-
+//let pizzaCart = PizzaCart();
     let smallQty = 0;
     let medQty = 0;
     let largeQty = 0;
@@ -8,9 +8,10 @@ module.exports = function PizzaCart() {
     let medTotal = 0;
     let largeTotal = 0;
     let totalCart = 0;
-    let order = 0;
-    //let payAmt = 0;
-    let hiddenBtn = "hidden";
+    let checkOut = 0;
+    let payAmt = 0;
+    let hiddenBtn = "hidden";;
+    //let message = 0;
 
     function BtnClicked(event) {
         //event = event || window.event;
@@ -77,13 +78,14 @@ smallTotal = smallTotal + 49.00
 smallQty++
 totalCart = totalCart + smallTotal
 showOrderBtn();
-}
+    }
+
 function removeSmall(){
     smallTotal = smallTotal - 49.00
     smallQty--
     totalCart = totalCart - 49.00
     showOrderBtn();
-}
+    }
 
 function buyMed(){
     medTotal = medTotal + 89.00
@@ -91,6 +93,7 @@ function buyMed(){
     totalCart = totalCart + medTotal
     showOrderBtn();
     }
+
 function removeMed(){
         medTotal = medTotal - 89.00
         medQty--
@@ -104,6 +107,7 @@ function buyLarge(){
     totalCart = totalCart + largeTotal
     showOrderBtn();
     }
+
 function removeLarge(){
     largeTotal = largeTotal - 129.00
     largeQty--
@@ -141,18 +145,79 @@ function getHiddenBtn(){
     return hiddenBtn;
 }
 
-// function checkoutBtn(){
-//     checkOut.classList.add('hidden');
-//     payOut.classList.remove('hidden');
+ function checkOutClick(){
+    const checkOut = {
+        orderId : 32,
+        status : "Payment due", 
+        status : "Paid",
+        status : "Collected",
+        amount : 213.97
+      }
+      return checkOut;
 // {
 //     return checkOut
 // }
-// }
+}
 
 // function checkOutClick(){
 //     checkOut.classList.add('hidden');
 //     payOut.classList.remove('hidden');
 // }
+//function payment(){
+    //let message = message.classList.toggle('hidden')
+    //message.classList.toggle('hidden');
+//     var paymentAmt = Number(payAmt.value);
+//  if (paymentAmt == pizzaCart.priceUpdate().totalCart){
+    //message.innerHTML = "Enjoy your Pizza!";
+    //pizzaCart.resetCart();
+    //checkOut.classList.remove('hidden');
+
+    // smallPizzaQty.innerHTML = shoppingCart.resetCart().smallQty;
+    // medPizzaQty.innerHTML = shoppingCart.resetCart().medQty;
+    // largePizzaQty.innerHTML = shoppingCart.resetCart().largeQty;
+
+    // smallPizzaTotal.innerHTML = shoppingCart.resetCart().smallTotal;
+    // medPizzaTotal.innerHTML = shoppingCart.resetCart().medTotal;
+    // largePizzaTotal.innerHTML = shoppingCart.resetCart().largeTotal;
+    // cartTotal.innerHTML = shoppingCart.resetCart().totalCart;
+
+    // setTimeout(function () {
+    //     message.classList.toggle('hidden');
+    //     checkOut.classList.toggle('hidden');
+    //     payOut.classList.add('hidden');
+    //     payAmt.value = "";
+    // }, 2500);
+
+//  } else  (paymentAmt > pizzaCart.priceUpdate().totalCart) 
+//     //var change = paymentAmt - totalCart;
+    // message.innerHTML = "Enjoy your Pizza, here is your change R" + shoppingCart.change(paymentAmt);
+    //pizzaCart.resetCart();
+    // checkOut.classList.toggle('hidden');
+
+    // smallPizzaQty.innerHTML = shoppingCart.resetCart().smallQty;
+    // medPizzaQty.innerHTML = shoppingCart.resetCart().medQty;
+    // largePizzaQty.innerHTML = shoppingCart.resetCart().largeQty;
+
+    // smallPizzaTotal.innerHTML = shoppingCart.resetCart().smallTotal;
+    // medPizzaTotal.innerHTML = shoppingCart.resetCart().medTotal;
+    // largePizzaTotal.innerHTML = shoppingCart.resetCart().largeTotal;
+    // cartTotal.innerHTML = shoppingCart.resetCart().totalCart;
+
+    // setTimeout(function () {
+    //     message.classList.toggle('hidden');
+    //     checkOut.classList.toggle('hidden');
+    //     payOut.classList.add('hidden');
+    //     payAmt.value = "";
+    // }, 2500);
+
+ //} else{
+//     message.innerHTML = "Sorry, that is not enough money!";
+//     setTimeout(function () {
+//         checkOut.classList.add('hidden');
+//         message.classList.toggle('hidden');
+//     }, 2500);
+// }
+//}
 
     return {
         BtnClicked,
@@ -168,8 +233,10 @@ function getHiddenBtn(){
         getTotals,
         getQuantities,
         getHiddenBtn,
+       // orderPizza
         //checkoutBtn,
-        //checkOutClick
+        checkOutClick,
+        //payment
     }
 
 

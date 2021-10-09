@@ -1,8 +1,18 @@
 const express = require('express');
 const exphbs  = require('express-handlebars');
 let bodyParser = require('body-parser');
-let PizzaCart = require('./js/functions');
+let PizzaCart = require('./js/functions')
 const shoppingCart = PizzaCart();
+
+//let jsdom = require('jsdom');
+//let JSDOM = require('JSDOM')
+//const jsdom = require('jsdom');
+
+// const dom = JSDOM('./js/dom')
+// const { JSDOM } = require("jsdom");
+
+//const dom = new JSDOM(html)
+
 
 const app = express();
 
@@ -33,6 +43,8 @@ app.get('/', function(req, res){
 	let quantities = shoppingCart.getQuantities();
 	let hiddenBtn = shoppingCart.getHiddenBtn();
 	//let checkout = shoppingCart.checkoutBtn();
+	//let orderingPizza = shoppingCart.orderPizza();
+	
 	
 	
 		res.render('index', {
@@ -40,8 +52,15 @@ app.get('/', function(req, res){
 			quantities,
 			hiddenBtn,
 			//  checkout  
+			//orderingPizza
 		})
 	
+	});
+
+	app.get('/cart', function(req, res){
+		shoppingCart.checkOutClick();
+		//shoppingCart.payment(); 
+		res.render('/')
 	});
 	
 	app.get('/remove-small', function(req, res){
@@ -79,13 +98,14 @@ app.get('/', function(req, res){
 		shoppingCart.buyLarge();
 	
 			res.redirect('/')
-	});
+	}); 
 	  
 
-app.post('/count', function(req, res) {
-	//console.log(req.body.size)
-	counter++;
-	res.redirect('/')
+    app.post('/count', function(req, res) {
+	    //console.log(req.body.size)
+	    counter++;
+	    //shoppingCart.orderPizza();
+	        res.redirect('/')
 	
 });
 

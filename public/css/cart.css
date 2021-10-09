@@ -15,7 +15,7 @@ h3 {
     margin-right: auto;
     
 }
-.checkOut, .payBtn {
+.orderPizza, .payBtn {
     display: box;
     margin: auto;
     border-radius: 1em;

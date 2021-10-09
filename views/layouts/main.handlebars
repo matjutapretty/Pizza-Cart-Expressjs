@@ -60,7 +60,7 @@
         </tr>
 
         <tr>
-            <form action="/" method="POST">
+            <form action="/cart" method="POST">
             <td colspan="4">
                 <h3 class="product">Total Cost</h3>
             </td>
@@ -71,13 +71,13 @@
 
         <tr>
             <td colspan="5">
-                <a href="/" class="order {{hiddenBtn}}" name="order">Order</a>
+                <a href="/cart" class="checkOut {{hiddenBtn}}" name="checkout">Check Out</a>
             </td>
             </form>
         </tr>
     </table>
 
-    <div class="payOut hidden">
+    <div class="payOut {{hiddenBtn}}">
         <table class="cartTable">
             <tr>
                 <form action="/" method="POST"></form>
@@ -91,7 +91,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <button class="payBtn" type="submit" name="pay">Pay</button>
+                    <a href="/cart" class="payBtn" type="submit" name="pay">Pay</a>
                 </td>
                 </form>
             </tr>
