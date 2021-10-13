@@ -6,150 +6,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shopping Pizza Cart</title>
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
-	<div class="container" >
-		<div>Nav bar here...</div>
-		{{!-- {{{body}}} --}}
+	 <div class="container" >
+		{{!-- <div>Nav bar here...</div> --}}
+		{{!-- {{{body}}}  --}}
 
-<h1>Pizza Shopping Cart</h1>
+{{!-- <h1>Pizza Shopping Cart</h1> --}}
 
     <h1>Perfect Pizza</h1>
 
-<table class="cartTable">
-        <tr>
-            <td class="product">
-                <h3 class="product">Small Pizza</h3>
-            </td>
-            <td><a href="/buy-small" class="addBtn small" name="plusBtn" value="smallAdd" data-size="smallAdd" id="test">+</a></td>
-            <td>
-                <h3 class="smallPizzaQty product">{{quantities.smallQty}}</h3>
-            </td>
-            <td><a href="/remove-small" class="minusBtn small" name="subtractBtn" value="smallMinus" data-size="smallMinus" >-</a></td>
-            <td>
-                <h3 class="product">R<span class="smallPizzaTotal">{{totals.smallTotal}}</span>  
-            </td>
-        </tr>
+    {{> cart}}
 
-        <tr>
-            <td class="product">
-                <h3 class="product">Medium Pizza</h3>
-            </td>
-            <td><a href="/buy-med" class="addBtn med" name="plusBtn" value="medAdd" data-size="medAdd" >+</a></td>
-            <td>
-                <h3 class="medPizzaQty product">{{quantities.medQty}}</h3>
-            </td>
-            <td><a href="/remove-med" class="minusBtn med" name="subtractBtn" value="medMinus" data-size="medMinus" >-</a></td>
-            <td>
-                <h3 class="product">R<span class="medPizzaTotal">{{totals.medTotal}}</span>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <h3 class="product">Large Pizza</h3>
-            </td>
-            <td><a href="/buy-large" class="addBtn large" name="plusBtn" value="largeAdd" data-size="largeAdd" >+</a></td>
-            <td>
-                <h3 class="largePizzaQty product">{{quantities.largeQty}}</h3>
-            </td>
-            <td><a href="/remove-large" class="minusBtn large" name="subtractBtn" value="largeMinus" data-size="largeMinus" >-</a></td>
-            <td>
-                <h3 class="product">R<span class="largePizzaTotal">{{totals.largeTotal}}</span>
-            </td>
-        </tr>
-
-        <tr>
-            <form action="/cart" method="POST">
-            <td colspan="4">
-                <h3 class="product">Total Cost</h3>
-            </td>
-            <td>
-                <h3 class="product">R<span class="cartTotal">{{totals.totalCart}}</span></h3>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="5">
-                <a href="/cart" class="checkOut {{hiddenBtn}}" name="checkout">Check Out</a>
-            </td>
-            </form>
-        </tr>
-    </table>
-
-    <div class="payOut {{hiddenBtn}}">
-        <table class="cartTable">
-            <tr>
-                <form action="/" method="POST"></form>
-                <h3 class="hidden product message">Message</h3>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Payment Amount:</h3>
-                </td>
-                <td class="pAmt">R<input class="payAmt" type="number"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <a href="/cart" class="payBtn" type="submit" name="pay">Pay</a>
-                </td>
-                </form>
-            </tr>
-        </table>
-    </div>
-
-
-<div class="pizzas">
-
-    <div class="pizza small_pizza" >
-
-        <h2>Small Pizza</h2>
-       
-    <img src="/images/chicken-crammed-crust.png" width="150" class="center">
-
-
-         <h3>R49.00</h3>
-         <div>
-        MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
-    </div>
-    <a href="/buy-small" class="addBtn small buy" name="plusBtn" value="smallAdd" data-size="smallAdd" >Buy</a>
-    </div>
-    
-    <div class="pizza medium_pizza" >
-
-        <h2>Medium Pizza</h2>
-        
-    <img src="/images/chicken-crammed-crust.png" width="200" class="center">
-
-
-         <h3>R89.00</h3>
-         <div>
-            MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
-        </div>
-        <form action="/cart" method="POST">
-        <a href="/buy-med" class="addBtn med buy" name="plusBtn" value="medAdd" data-size="medAdd" >Buy</a>
-        </form>
-    </div>
-    
-    
-    <div class="pizza large_pizza" >
-
-        <h2>Large Pizza</h2>
-        
-        <img src="/images/chicken-crammed-crust.png" width="200" class="center" >
-
-
-         <h3>R129.00</h3>
-         <div>
-            MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
-        </div>
-        <form action="/cart" method="POST">
-        <a href="buy-large" class="addBtn large buy" name="plusBtn" value="largeAdd" data-size="largeAdd" >Buy</a>
-        </form>
-    </div>
-
-</div>
-
+    {{{body}}}
 
 <div class="pizza contact_us" >
 <h2>Contact details</h2>
@@ -176,3 +46,16 @@
 	</div>
 </body>
 </html>
+
+
+        {{!-- </form>
+
+    <form action="/" method="POST">
+    <label for="theMessage">Message</label>
+    <input type="text"> <br><br>
+    <button type="submit">Submit</button>
+
+    <% if(theMessage != '') { %>
+    <h1>style="color: pink; font-family: Arial, Helvetica, sans-serif;">Enjoy your pizza!, <%= theMessage %></h1>
+    <% } %>
+    </form> --}}

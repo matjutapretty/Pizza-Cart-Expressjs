@@ -1,23 +1,52 @@
-<h1>Counter Index</h1>
+<div class="pizzas">
+
+    <div class="pizza small_pizza" >
+
+        <h2>Small Pizza</h2>
+       
+    <img src="/images/chicken-crammed-crust.png" width="150" class="center">
 
 
-<div>
-    Start here
-
-    {{!-- <form action="/count" method="post" >
-
-    <input type="submit" name="size" value="Small">
-    <input type="submit" name="size" value="Medium">
-    <input type="submit" name="size" value="Large">
-
-</form> --}}
-
-    <form action="/count" method="post">
-        <div class="counter" >
-            {{counter}}
-        </div>    
-        <input type="submit" value="Press button to count">
-    
+         <h3>R49.00</h3>
+         <div>
+        MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
+    </div>
+    <form action="/cart" method="POST">
+    <button class="addBtn small buy" name="size" value="smallAdd" on type="submit">Buy</button>
     </form>
+    </div>
+    
+    <div class="pizza medium_pizza" >
+
+        <h2>Medium Pizza</h2>
+        
+    <img src="/images/chicken-crammed-crust.png" width="200" class="center">
+
+
+         <h3>R89.00</h3>
+         <div>
+            MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
+        </div>
+        <form action="/cart" method="POST">
+        <button class="addBtn med buy" name="size" value="medAdd" on type="submit">Buy</button>
+        </form>
+    </div>
+    
+    
+    <div class="pizza large_pizza" >
+
+        <h2>Large Pizza</h2>
+        
+        <img src="/images/chicken-crammed-crust.png" width="200" class="center" >
+
+
+         <h3>R129.00</h3>
+         <div>
+            MEATY CRAMMED-CRUST® : The crust crammed with chicken cheese grillers & the pizza topped with tomato & herb pizza sauce, salami, macon, BBQ sauce & mozzarella.
+        </div>
+        <form action="/cart" method="POST">
+        <button class="addBtn large buy" name="size" value="largeAdd" on type="submit">Buy</button>
+
+    </div>
 
 </div>
